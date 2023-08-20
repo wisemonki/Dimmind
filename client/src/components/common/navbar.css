@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+  margin: 0  ;
+  box-sizing: border-box ;
+}
+
+.sign-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    height: 32px;
+    background: #dedede;
+    z-index: 0;
+    margin-left: auto
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.main-nav{
+    width: calc(100%) ; 
+    height: 3rem ;
+    display: grid ;
+    grid-template-columns: 10rem 2fr 2fr 1fr 10rem;
+    
+    
+    
+}
+.menu-link{
+    display: grid;
+    grid-column: 2/3;
+    justify-content: start;
+    align-items: center;
+}
+.menu-link ul {
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-link ul li {
+    margin-left: 50%;
+}
+
+.logo{
+    display:grid;
+    grid-column: 3/4;
+    justify-content: start;
+    align-items: center;
+    margin-top: -20px;
+
+}
+
+.search{
+    grid-column: 4/5;
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    align-items: center;
+    text-align: right;
+}
+
+ .hamburger-menu{
+    display: none;
+}
+
+
+
+.search :first-child {
+    grid-column: 2/3;
+    text-align: right;
+}
+
+.fa-solid{
+    margin-left: 300%;
+}
+
+@media(max-width: 1080px){
+    .main-nav{
+        height: 7rem;
+        grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    }
+    
+    .menu-link,
+    .search{
+        height: 7rem;
+    }
+    .logo{
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 998px){
+
+    .mobile-menu-link {
+        grid-column: 2/4;
+        position: relative;
+        z-index: 99;
+      }
+    
+      .mobile-menu-link {
+        background-color: white;
+        height: 20rem;
+        display: grid;
+        grid-column: 2/5;
+        align-items: center;
+        padding-left: 3rem;
+        transition: all 2s linear;
+        transform-origin: top;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    
+      .mobile-menu-link ul {
+        height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: start;
+      }
+    
+      .mobile-menu-link ul li:first-child {
+        transition-delay: 0.2s;
+      }
+    
+       .logo h2{
+        /* text-align: start; */
+        margin-right: 100px;
+       }
+   
+    .search,
+    .menu-link{
+        display: none;
+    }
+
+     .hamburger-menu{
+        display: block;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
+}
